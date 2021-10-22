@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="244dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="82dp"
+        android:text="Nome do App"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bebidas"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Bebidas"
+        app:layout_constraintBottom_toTopOf="@+id/doces"
+        app:layout_constraintEnd_toStartOf="@+id/cereais"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/cereais"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="20dp"
+        android:text="Cereais"
+        app:layout_constraintBottom_toTopOf="@+id/embutidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bebidas"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/doces"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Doces"
+        app:layout_constraintBottom_toTopOf="@+id/enlatados"
+        app:layout_constraintEnd_toStartOf="@+id/embutidos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bebidas" />
+
+    <Button
+        android:id="@+id/enlatados"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Enlatados"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/legumes"
+        app:layout_constraintEnd_toStartOf="@+id/industria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doces" />
+
+    <Button
+        android:id="@+id/legumes"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Leguminosas - Sementes"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/oleos"
+        app:layout_constraintEnd_toStartOf="@+id/leite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enlatados" />
+
+    <Button
+        android:id="@+id/oleos"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="70dp"
+        android:text="Óleos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/temperos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/legumes" />
+
+    <Button
+        android:id="@+id/embutidos"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="20dp"
+        android:text="Embutidos"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/industria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/doces"
+        app:layout_constraintTop_toBottomOf="@+id/cereais" />
+
+    <Button
+        android:id="@+id/industria"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="20dp"
+        android:text="Industrializados"
+        app:layout_constraintBottom_toTopOf="@+id/leite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/enlatados"
+        app:layout_constraintTop_toBottomOf="@+id/embutidos" />
+
+    <Button
+        android:id="@+id/leite"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="20dp"
+        android:text="Leite e Derivados"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/temperos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/legumes"
+        app:layout_constraintTop_toBottomOf="@+id/industria" />
+
+    <Button
+        android:id="@+id/temperos"
+        android:layout_width="113dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="70dp"
+        android:text="Temperos"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/oleos"
+        app:layout_constraintTop_toBottomOf="@+id/leite" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

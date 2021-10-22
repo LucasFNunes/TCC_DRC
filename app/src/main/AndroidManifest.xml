@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tcc_drc">
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/dev_logo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.TCC_DRC" >
+        <!-- Splash screen -->
+        <activity
+            android:name="com.example.tcc_drc.ui.activities.SplashDevMedia"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity Principal -->
+        <activity
+            android:name="com.example.tcc_drc.ui.activities.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+</manifest>
+
+
