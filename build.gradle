@@ -3,7 +3,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        jcenter()
+
 
     }
     dependencies {
@@ -14,15 +14,21 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        jcenter()
-
+// Temporary workaround for missing trove4j when removing jcenter() until you can upgrade to "com.android.tools.build:gradle:4.2.0"
+buildscript {
+    configurations.all {
+        resolutionStrategy {
+            eachDependency {
+                // https://issuetracker.google.com/issues/109894262#comment9
+                if (requested.group == "org.jetbrains.trove4j" && requested.name == "trove4j" && requested.version == "20160824") {
+                    useTarget("org.jetbrains.intellij.deps:trove4j:1.0.20181211")
+                }
+            }
+        }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
