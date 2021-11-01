@@ -4,17 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/drawable/gradient_background.xml" value="0.17777777777777778" />
-        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_bebidas.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_cereais.xml" value="0.2210144927536232" />
+        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/drawable/ic_botao_return.xml" value="0.1" />
+        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout-mcc555/livros_layout.xml" value="0.278125" />
+        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_bebidas.xml" value="0.25" />
+        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_cereais.xml" value="0.33" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_doces.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_embutidos.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_enlatados.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_industrializados.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_legumes.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_leite.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_oleos.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_splash.xml" value="0.33" />
+        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_produtos.xml" value="0.25" />
+        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_sobre.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activity_temperos.xml" value="0.2210144927536232" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/activityprincipal.xml" value="0.1" />
         <entry key="..\:/Users/LUCAS/AndroidStudioProjects/TCC_DRC/app/src/main/res/layout/splashdevmedia.xml" value="0.1" />

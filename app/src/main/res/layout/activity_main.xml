@@ -164,4 +164,18 @@
         app:layout_constraintStart_toEndOf="@+id/oleos"
         app:layout_constraintTop_toBottomOf="@+id/leite" />
 
+    <Button
+        android:id="@+id/sobre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="3dp"
+        android:text="Sobre o App"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oleos" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
