@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 import android.content.Context;
 
-public class CriaBancoProduto extends SQLiteOpenHelper {
-
+public class CriaBancoProduto  {
+/*
     private static final String NOME_BANCO = "banco.db";
     private static final String TABELA1 = "Produtos";
     private static final int ID = 1;
@@ -61,4 +61,6 @@ public class CriaBancoProduto extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS" + TABELA1);
         onCreate(db);
     }
+
+ */
 }

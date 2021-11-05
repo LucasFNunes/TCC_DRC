@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TCC_DRC</string>
+    <string name="nome_do_app">Nome do App</string>
+    <string name="bebidas">Bebidas</string>
+    <string name="cereais">Cereais</string>
+    <string name="doces">Doces</string>
+    <string name="enlatados">Enlatados</string>
+    <string name="leguminosas_sementes">Leguminosas - Sementes</string>
+    <string name="leos">Óleos</string>
+    <string name="embutidos">Embutidos</string>
+    <string name="industrializados">Industrializados</string>
+    <string name="leite_e_derivados">Leite e Derivados</string>
+    <string name="temperos">Temperos</string>
+    <string name="sobre_o_app">Sobre o App</string>
 </resources>
