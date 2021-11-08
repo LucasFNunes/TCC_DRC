@@ -12,6 +12,30 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.TCC_DRC">
         <activity
+            android:name=".ui.activities.infonutriCereais.Aveia"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriCereais.Cereal"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriCereais.Biscoitoagua"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriCereais.Biscoitorecheado"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriBebidas.Cerveja"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriBebidas.SucoIndust"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriBebidas.AguaCoco"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriBebidas.AguaGas"
+            android:exported="true" />
+        <activity
             android:name=".ui.activities.Sobre"
             android:exported="true" />
         <activity
