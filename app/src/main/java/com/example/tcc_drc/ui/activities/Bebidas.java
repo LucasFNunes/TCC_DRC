@@ -30,25 +30,12 @@ public class Bebidas extends AppCompatActivity {
 
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 
-
         criarBancoDados();
-
-
     }
 
     public void criarBancoDados(){
-        bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-        Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM Categoria2", null);
-        ArrayList<String> linhas = new ArrayList<String>();
-        ArrayAdapter meuAdapter = new ArrayAdapter<String>(
-                this,
-                android.R.layout.simple_list_item_1,
-                android.R.id.text1,
-                linhas
-        );
-        listViewDados.setAdapter(meuAdapter);
-        meuCursor.moveToFirst();
-        if (meuCursor == null) {
+
+
         try {
 
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
@@ -61,37 +48,46 @@ public class Bebidas extends AppCompatActivity {
         }
         inserirDadosTemp();
 
-    }else {
-        listarDados();
-    }
     }
 
-    public void inserirDadosTemp(){
-        try {
-            bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-            String sql="INSERT INTO Categoria (nome) VALUES(?)";
-            SQLiteStatement stmt = bancoDados.compileStatement(sql);
+    public void inserirDadosTemp() {
+        bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
+        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Categoria)", null);
 
-            stmt.bindString(1,"Água com gás ");
-            stmt.executeInsert();
 
-            stmt.bindString(1,"Água de coco");
-            stmt.executeInsert();
+        if (cur != null) {
+            cur.moveToFirst();
+            if (cur.getInt(0) == 0) {
+                try {
+                    bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
+                    String sql = "INSERT INTO Categoria (nome) VALUES(?)";
+                    SQLiteStatement stmt = bancoDados.compileStatement(sql);
 
-            stmt.bindString(1,"Suco industrializado");
-            stmt.executeInsert();
+                    stmt.bindString(1, "Água com gás ");
+                    stmt.executeInsert();
 
-            stmt.bindString(1,"Cerveja");
-            stmt.executeInsert();
+                    stmt.bindString(1, "Água de coco");
+                    stmt.executeInsert();
 
-            bancoDados.close();
+                    stmt.bindString(1, "Suco industrializado");
+                    stmt.executeInsert();
 
-        }catch (Exception e){
-            e.printStackTrace();
+                    stmt.bindString(1, "Cerveja");
+                    stmt.executeInsert();
 
+                    bancoDados.close();
+                    listarDados();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+
+                }
+            } else {
+                listarDados();
+            }
         }
-        listarDados();
     }
+
     public void listarDados(){
         try {
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);

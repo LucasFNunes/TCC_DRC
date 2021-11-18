@@ -12,6 +12,78 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.TCC_DRC">
         <activity
+            android:name=".ui.activities.infonutriTemperos.CaldoCarne"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriOleos.Manteiga"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriOleos.Margarina"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriLeite.Iogurte"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriLeite.Ricota"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriLeite.QueijoMinas"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriLeite.LeiteCoco"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriLegumes.CastanhaSal"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriLegumes.Amendoim"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriIndustrializados.Cafe"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriIndustrializados.Achocolatado"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriIndustrializados.Maionese"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriIndustrializados.ExtraTomate"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriEnlatados.Atum"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriEnlatados.Sardinha"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriEnlatados.Azeitona"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriEnlatados.Palmito"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriEmbutidos.Salsicha"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriEmbutidos.Mortadela"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriEmbutidos.Salame"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriDoces.MariaMole"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriDoces.DocePessego"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriDoces.DoceLeite"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriDoces.ChocolateAmargo"
+            android:exported="true" />
+        <activity
             android:name=".ui.activities.infonutriCereais.Aveia"
             android:exported="true" />
         <activity
@@ -22,9 +94,6 @@
             android:exported="true" />
         <activity
             android:name=".ui.activities.infonutriCereais.Biscoitorecheado"
-            android:exported="true" />
-        <activity
-            android:name=".ui.activities.infonutriBebidas.Cerveja"
             android:exported="true" />
         <activity
             android:name=".ui.activities.infonutriBebidas.SucoIndust"
