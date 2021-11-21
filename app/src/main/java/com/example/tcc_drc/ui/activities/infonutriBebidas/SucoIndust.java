@@ -32,7 +32,7 @@ public class SucoIndust extends AppCompatActivity {
             try {
 
                 bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-                bancoDados.execSQL("CREATE TABLE IF NOT EXISTS Produtos3(" +
+                bancoDados.execSQL("CREATE TABLE IF NOT EXISTS Produtos6(" +
                         " id INTEGER PRIMARY KEY AUTOINCREMENT" +
                         ", nome VARCHAR)");
                 bancoDados.close();
@@ -46,7 +46,7 @@ public class SucoIndust extends AppCompatActivity {
 
     public void inserirDadosTemp(){
         bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos)", null);
+        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos6)", null);
 
 
         if (cur != null) {
@@ -54,28 +54,28 @@ public class SucoIndust extends AppCompatActivity {
             if (cur.getInt(0) == 0) {
                 try {
                     bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-                    String sql = "INSERT INTO Produtos (nome) VALUES(?)";
+                    String sql = "INSERT INTO Produtos6 (nome) VALUES(?)";
                     SQLiteStatement stmt = bancoDados.compileStatement(sql);
 
-                    stmt.bindString(1, "Porção: Água com gás ");
+                    stmt.bindString(1, "Informação Nutricional: Suco Industrializado");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Informação Nutricional: 1 copo - 200 mL");
+                    stmt.bindString(1, "Porção: 1 copo - 200 mL ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Valor energético (Kcal): 77,4");
+                    stmt.bindString(1, "Valor energético (Kcal): 83,9");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Carboidratos (g): 20");
+                    stmt.bindString(1, "Carboidratos (g): 19,2");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Açúcares (g): 20");
+                    stmt.bindString(1, "Açúcares (g): 15,2");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Proteínas (g): 0");
+                    stmt.bindString(1, "Proteínas (g): 1,5");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Gorduras totais (g): 0");
+                    stmt.bindString(1, "Gorduras totais (g): 0,4");
                     stmt.executeInsert();
 
                     stmt.bindString(1, "Gorduras saturadas (g): 0");
@@ -84,16 +84,16 @@ public class SucoIndust extends AppCompatActivity {
                     stmt.bindString(1, "Gorduras trans (g): 0");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Fibra Alimentar (g): 0 ");
+                    stmt.bindString(1, "Fibra Alimentar (g): 0,7 ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Sódio (mg): 18");
+                    stmt.bindString(1, "Sódio (mg): 43,4");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Fósforo (mg): 0");
+                    stmt.bindString(1, "Fósforo (mg): 27,8");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Potássio (mg); 2,8");
+                    stmt.bindString(1, "Potássio (mg); 401,4");
                     stmt.executeInsert();
                     bancoDados.close();
                     listarDados();
@@ -113,7 +113,7 @@ public class SucoIndust extends AppCompatActivity {
     public void listarDados(){
         try {
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-            Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM Produtos3", null );
+            Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM Produtos6", null );
             ArrayList<String> linhas = new ArrayList <String>();
             ArrayAdapter meuAdapter = new ArrayAdapter<String>(
                     this,

@@ -6,8 +6,10 @@ plugins {
 android {
     signingConfigs {
         debug {
-            keyAlias var
+            storeFile file('C:\\Users\\LUCAS\\Desktop\\Android_keys\\teste.jks')
+            storePassword 'asdfgh147'
             keyPassword 'asdfgh147'
+            keyAlias 'key0'
         }
     }
     compileSdk 31

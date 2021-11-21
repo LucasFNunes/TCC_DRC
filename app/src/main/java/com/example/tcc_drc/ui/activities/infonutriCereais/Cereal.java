@@ -23,6 +23,8 @@ public class Cereal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cereal);
+        listViewDados = (ListView) findViewById(R.id.listViewDados);
+
         criarBancoDados();
     }
 
@@ -31,7 +33,7 @@ public class Cereal extends AppCompatActivity {
         try {
 
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-            bancoDados.execSQL("CREATE TABLE IF NOT EXISTS Produtos1(" +
+            bancoDados.execSQL("CREATE TABLE IF NOT EXISTS Produtos11(" +
                     " id INTEGER PRIMARY KEY AUTOINCREMENT" +
                     ", nome VARCHAR)");
             bancoDados.close();
@@ -46,7 +48,7 @@ public class Cereal extends AppCompatActivity {
     public void inserirDadosTemp(){
 
         bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos)", null);
+        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos11)", null);
 
 
         if (cur != null) {
@@ -54,13 +56,13 @@ public class Cereal extends AppCompatActivity {
             if (cur.getInt(0) == 0) {
                 try {
                     bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-                    String sql = "INSERT INTO Produtos (nome) VALUES(?)";
+                    String sql = "INSERT INTO Produtos11 (nome) VALUES(?)";
                     SQLiteStatement stmt = bancoDados.compileStatement(sql);
 
-                    stmt.bindString(1, "Porção: Água com gás ");
+                    stmt.bindString(1, "Informação Nutricional: Biscoito de polvilho doce ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Informação Nutricional: 1 copo - 200 mL");
+                    stmt.bindString(1, " Porção: 4 unidades 30g");
                     stmt.executeInsert();
 
                     stmt.bindString(1, "Valor energético (Kcal): 77,4");
@@ -113,7 +115,7 @@ public class Cereal extends AppCompatActivity {
     public void listarDados(){
         try {
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-            Cursor meuCursor = bancoDados.rawQuery("SELECT 1 FROM Produtos1", null );
+            Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM Produtos11", null );
             ArrayList<String> linhas = new ArrayList <String>();
             ArrayAdapter meuAdapter = new ArrayAdapter<String>(
                     this,

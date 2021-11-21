@@ -1,7 +1,13 @@
 package com.example.tcc_drc.ui.activities;
 
 import com.example.tcc_drc.R;
+import com.example.tcc_drc.ui.activities.infonutriBebidas.AguaCoco;
 import com.example.tcc_drc.ui.activities.infonutriBebidas.AguaGas;
+import com.example.tcc_drc.ui.activities.infonutriBebidas.Cerveja;
+import com.example.tcc_drc.ui.activities.infonutriBebidas.RefriCola;
+import com.example.tcc_drc.ui.activities.infonutriBebidas.RefriGuarana;
+import com.example.tcc_drc.ui.activities.infonutriBebidas.RefriLaranja;
+import com.example.tcc_drc.ui.activities.infonutriBebidas.SucoIndust;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -9,7 +15,9 @@ import android.database.sqlite.SQLiteStatement;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +38,57 @@ public class Bebidas extends AppCompatActivity {
 
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 
+
+
+        bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
+        bancoDados.execSQL("CREATE TABLE IF NOT EXISTS Categoria(" +
+                " id INTEGER PRIMARY KEY AUTOINCREMENT" +
+                ", nome VARCHAR)");
+        Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM Categoria", null );
+        ArrayList<String> linhas = new ArrayList <String>();
+        ArrayAdapter adapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                android.R.id.text1,
+                linhas
+        );
+
+        listViewDados.setAdapter(adapter);
+        listViewDados.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+                if(position == 0){
+                    Intent intent = new Intent(view.getContext(), AguaGas.class);
+                    startActivity(intent);
+                }
+                if(position == 1){
+                    Intent intent = new Intent(view.getContext(), AguaCoco.class);
+                    startActivity(intent);
+                }
+                if(position == 2){
+                    Intent intent = new Intent(view.getContext(), Cerveja.class);
+                    startActivity(intent);
+                }
+                if(position == 3){
+                    Intent intent = new Intent(view.getContext(), RefriCola.class);
+                    startActivity(intent);
+                }
+                if(position == 4){
+                    Intent intent = new Intent(view.getContext(), RefriLaranja.class);
+                    startActivity(intent);
+                }
+                if(position == 5){
+                    Intent intent = new Intent(view.getContext(), RefriGuarana.class);
+                    startActivity(intent);
+                }
+                if(position == 6){
+                    Intent intent = new Intent(view.getContext(), SucoIndust.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        bancoDados.close();
+        deleteDatabase("crudeapp");
         criarBancoDados();
     }
 
@@ -69,11 +128,22 @@ public class Bebidas extends AppCompatActivity {
                     stmt.bindString(1, "Água de coco");
                     stmt.executeInsert();
 
+                    stmt.bindString(1, "Cerveja");
+                    stmt.executeInsert();
+
+                    stmt.bindString(1, "Refrigerante Cola");
+                    stmt.executeInsert();
+
+                    stmt.bindString(1, "Refrigerante Laranja");
+                    stmt.executeInsert();
+
+                    stmt.bindString(1, "Refrigerante Guaraná");
+                    stmt.executeInsert();
+
                     stmt.bindString(1, "Suco industrializado");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Cerveja");
-                    stmt.executeInsert();
+
 
                     bancoDados.close();
                     listarDados();
@@ -111,20 +181,5 @@ public class Bebidas extends AppCompatActivity {
         }
 
     }
-    public void onClickAguaGas(View view) {
-        Intent intent = new Intent(this, AguaGas.class);
-        startActivity(intent);
-    }
-    public void onClickAguaCoco(View view) {
-        Intent intent = new Intent(this, AguaGas.class);
-        startActivity(intent);
-    }
-    public void onClickCerveja(View view) {
-        Intent intent = new Intent(this, AguaGas.class);
-        startActivity(intent);
-    }
-    public void onClickSucoIndust(View view) {
-        Intent intent = new Intent(this, AguaGas.class);
-        startActivity(intent);
-    }
+
 }

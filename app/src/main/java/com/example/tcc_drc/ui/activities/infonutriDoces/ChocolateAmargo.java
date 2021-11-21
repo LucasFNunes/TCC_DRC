@@ -22,6 +22,8 @@ public class ChocolateAmargo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chocolate_amargo);
+        listViewDados = (ListView) findViewById(R.id.listViewDados);
+
         criarBancoDados();
     }
 
@@ -30,7 +32,7 @@ public class ChocolateAmargo extends AppCompatActivity {
         try {
 
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-            bancoDados.execSQL("CREATE TABLE IF NOT EXISTS Produtos1(" +
+            bancoDados.execSQL("CREATE TABLE IF NOT EXISTS Produtos15(" +
                     " id INTEGER PRIMARY KEY AUTOINCREMENT" +
                     ", nome VARCHAR)");
             bancoDados.close();
@@ -45,7 +47,7 @@ public class ChocolateAmargo extends AppCompatActivity {
     public void inserirDadosTemp(){
 
         bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos)", null);
+        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos15)", null);
 
 
         if (cur != null) {
@@ -53,28 +55,28 @@ public class ChocolateAmargo extends AppCompatActivity {
             if (cur.getInt(0) == 0) {
                 try {
                     bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-                    String sql = "INSERT INTO Produtos (nome) VALUES(?)";
+                    String sql = "INSERT INTO Produtos15 (nome) VALUES(?)";
                     SQLiteStatement stmt = bancoDados.compileStatement(sql);
 
-                    stmt.bindString(1, "Porção: Água com gás ");
+                    stmt.bindString(1, "Informação Nutricional: Chocolate Meio Amargo");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Informação Nutricional: 1 copo - 200 mL");
+                    stmt.bindString(1, "Porção: 4 quadradinhos 25g ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Valor energético (Kcal): 77,4");
+                    stmt.bindString(1, "Valor energético (Kcal): 118,7");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Carboidratos (g): 20");
+                    stmt.bindString(1, "Carboidratos (g): 15,6");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Açúcares (g): 20");
+                    stmt.bindString(1, "Açúcares (g): ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Proteínas (g): 0");
+                    stmt.bindString(1, "Proteínas (g): 1,2");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Gorduras totais (g): 0");
+                    stmt.bindString(1, "Gorduras totais (g): 7,5");
                     stmt.executeInsert();
 
                     stmt.bindString(1, "Gorduras saturadas (g): 0");
@@ -83,16 +85,16 @@ public class ChocolateAmargo extends AppCompatActivity {
                     stmt.bindString(1, "Gorduras trans (g): 0");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Fibra Alimentar (g): 0 ");
+                    stmt.bindString(1, "Fibra Alimentar (g): 1,2 ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Sódio (mg): 18");
+                    stmt.bindString(1, "Sódio (mg): 2,2");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Fósforo (mg): 0");
+                    stmt.bindString(1, "Fósforo (mg): 55");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Potássio (mg); 2,8");
+                    stmt.bindString(1, "Potássio (mg); 108");
                     stmt.executeInsert();
                     bancoDados.close();
                     listarDados();
@@ -112,7 +114,7 @@ public class ChocolateAmargo extends AppCompatActivity {
     public void listarDados(){
         try {
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-            Cursor meuCursor = bancoDados.rawQuery("SELECT 1 FROM Produtos1", null );
+            Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM Produtos15", null );
             ArrayList<String> linhas = new ArrayList <String>();
             ArrayAdapter meuAdapter = new ArrayAdapter<String>(
                     this,

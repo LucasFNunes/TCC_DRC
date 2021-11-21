@@ -1,4 +1,4 @@
-package com.example.tcc_drc.ui.activities.infonutriEmbutidos;
+package com.example.tcc_drc.ui.activities.infonutriBebidas;
 
 import com.example.tcc_drc.R;
 
@@ -13,14 +13,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class Mortadela extends AppCompatActivity {
+public class RefriCola extends AppCompatActivity {
     private SQLiteDatabase bancoDados;
 
     public ListView listViewDados;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mortadela);
+        setContentView(R.layout.activity_refri_cola);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 
         criarBancoDados();
@@ -31,7 +31,7 @@ public class Mortadela extends AppCompatActivity {
         try {
 
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-            bancoDados.execSQL("CREATE TABLE IF NOT EXISTS Produtos23(" +
+            bancoDados.execSQL("CREATE TABLE IF NOT EXISTS Produtos3(" +
                     " id INTEGER PRIMARY KEY AUTOINCREMENT" +
                     ", nome VARCHAR)");
             bancoDados.close();
@@ -40,13 +40,12 @@ public class Mortadela extends AppCompatActivity {
         }
         inserirDadosTemp();
 
-
     }
 
-    public void inserirDadosTemp(){
+    public void inserirDadosTemp() {
 
         bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos23)", null);
+        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos3)", null);
 
 
         if (cur != null) {
@@ -54,31 +53,31 @@ public class Mortadela extends AppCompatActivity {
             if (cur.getInt(0) == 0) {
                 try {
                     bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-                    String sql = "INSERT INTO Produtos23 (nome) VALUES(?)";
+                    String sql = "INSERT INTO Produtos3 (nome) VALUES(?)";
                     SQLiteStatement stmt = bancoDados.compileStatement(sql);
 
-                    stmt.bindString(1, "Informação Nutricional: Mortadela");
+                    stmt.bindString(1, "Informação Nutricional: Refrigerante Cola");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Porção: 5 fatias 40g ");
+                    stmt.bindString(1, "Porção: 1 copo - 200 mL ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Valor energético (Kcal): 107,5");
+                    stmt.bindString(1, "Valor energético (Kcal): 69");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Carboidratos (g): 2,3");
+                    stmt.bindString(1, "Carboidratos (g): 17,3");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Açúcares (g): 1,8");
+                    stmt.bindString(1, "Açúcares (g): 17,3");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Proteínas (g): 4,8");
+                    stmt.bindString(1, "Proteínas (g): 0");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Gorduras totais (g): 8,7");
+                    stmt.bindString(1, "Gorduras totais (g): 0");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Gorduras saturadas (g): 2,4");
+                    stmt.bindString(1, "Gorduras saturadas (g): 0");
                     stmt.executeInsert();
 
                     stmt.bindString(1, "Gorduras trans (g): 0");
@@ -87,13 +86,13 @@ public class Mortadela extends AppCompatActivity {
                     stmt.bindString(1, "Fibra Alimentar (g): 0 ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Sódio (mg): 484,9");
+                    stmt.bindString(1, "Sódio (mg): 14,2");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Fósforo (mg): 86,3");
+                    stmt.bindString(1, "Fósforo (mg): 33,3");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Potássio (mg); 98,9");
+                    stmt.bindString(1, "Potássio (mg); 1,8");
                     stmt.executeInsert();
                     bancoDados.close();
                     listarDados();
@@ -113,7 +112,7 @@ public class Mortadela extends AppCompatActivity {
     public void listarDados(){
         try {
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-            Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM Produtos23", null );
+            Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM Produtos3", null );
             ArrayList<String> linhas = new ArrayList <String>();
             ArrayAdapter meuAdapter = new ArrayAdapter<String>(
                     this,

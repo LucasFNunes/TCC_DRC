@@ -1,7 +1,5 @@
 package com.example.tcc_drc.ui.activities.infonutriBebidas;
 
-
-
 import com.example.tcc_drc.R;
 
 import android.database.Cursor;
@@ -24,8 +22,6 @@ public class AguaCoco extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agua_coco);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
-
-
         criarBancoDados();
     }
 
@@ -49,7 +45,7 @@ public class AguaCoco extends AppCompatActivity {
     public void inserirDadosTemp(){
 
         bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos)", null);
+        Cursor cur = bancoDados.rawQuery("SELECT EXISTS (SELECT 1 FROM Produtos1)", null);
 
 
         if (cur != null) {
@@ -57,22 +53,22 @@ public class AguaCoco extends AppCompatActivity {
             if (cur.getInt(0) == 0) {
                 try {
                     bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE, null);
-                    String sql = "INSERT INTO Produtos (nome) VALUES(?)";
+                    String sql = "INSERT INTO Produtos1 (nome) VALUES(?)";
                     SQLiteStatement stmt = bancoDados.compileStatement(sql);
 
-                    stmt.bindString(1, "Porção: Água com gás ");
+                    stmt.bindString(1, "Informação Nutricional: Água de Coco");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Informação Nutricional: 1 copo - 200 mL");
+                    stmt.bindString(1, "Porção: 1 copo - 200 mL ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Valor energético (Kcal): 77,4");
+                    stmt.bindString(1, "Valor energético (Kcal): 43");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Carboidratos (g): 20");
+                    stmt.bindString(1, "Carboidratos (g): 10,6");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Açúcares (g): 20");
+                    stmt.bindString(1, "Açúcares (g): 3");
                     stmt.executeInsert();
 
                     stmt.bindString(1, "Proteínas (g): 0");
@@ -87,16 +83,16 @@ public class AguaCoco extends AppCompatActivity {
                     stmt.bindString(1, "Gorduras trans (g): 0");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Fibra Alimentar (g): 0 ");
+                    stmt.bindString(1, "Fibra Alimentar (g): 0,3 ");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Sódio (mg): 18");
+                    stmt.bindString(1, "Sódio (mg): 3,6");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Fósforo (mg): 0");
+                    stmt.bindString(1, "Fósforo (mg): 7,5");
                     stmt.executeInsert();
 
-                    stmt.bindString(1, "Potássio (mg); 2,8");
+                    stmt.bindString(1, "Potássio (mg); 323,3");
                     stmt.executeInsert();
                     bancoDados.close();
                     listarDados();
@@ -116,7 +112,7 @@ public class AguaCoco extends AppCompatActivity {
     public void listarDados(){
         try {
             bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);
-            Cursor meuCursor = bancoDados.rawQuery("SELECT 1 FROM Produtos1", null );
+            Cursor meuCursor = bancoDados.rawQuery("SELECT id, nome FROM Produtos1", null );
             ArrayList<String> linhas = new ArrayList <String>();
             ArrayAdapter meuAdapter = new ArrayAdapter<String>(
                     this,
