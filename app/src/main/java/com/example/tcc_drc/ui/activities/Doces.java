@@ -184,4 +184,8 @@ public class Doces extends AppCompatActivity {
         }
 
     }
+    public void onClickVoltar(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

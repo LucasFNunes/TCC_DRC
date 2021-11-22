@@ -126,8 +126,8 @@ public class Temperos extends AppCompatActivity {
         }
 
     }
-    public void onClickAguaGas(View view) {
-        Intent intent = new Intent(this, AguaGas.class);
+    public void onClickVoltar(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

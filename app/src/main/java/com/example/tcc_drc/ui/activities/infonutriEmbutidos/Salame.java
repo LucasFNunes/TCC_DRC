@@ -1,11 +1,14 @@
 package com.example.tcc_drc.ui.activities.infonutriEmbutidos;
 
 import com.example.tcc_drc.R;
+import com.example.tcc_drc.ui.activities.Embutidos;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -132,5 +135,9 @@ public class Salame extends AppCompatActivity {
 
         }
 
+    }
+    public void onClickVoltar(View view) {
+        Intent intent = new Intent(this, Embutidos.class);
+        startActivity(intent);
     }
 }

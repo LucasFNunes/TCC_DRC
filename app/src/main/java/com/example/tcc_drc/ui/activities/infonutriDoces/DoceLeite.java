@@ -1,10 +1,13 @@
 package com.example.tcc_drc.ui.activities.infonutriDoces;
 import com.example.tcc_drc.R;
+import com.example.tcc_drc.ui.activities.Doces;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -131,5 +134,9 @@ public class DoceLeite extends AppCompatActivity {
 
         }
 
+    }
+    public void onClickVoltar(View view) {
+        Intent intent = new Intent(this, Doces.class);
+        startActivity(intent);
     }
 }

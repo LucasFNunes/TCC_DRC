@@ -178,20 +178,8 @@ public class Leite extends AppCompatActivity {
         }
 
     }
-    public void onClickAguaGas(View view) {
-        Intent intent = new Intent(this, AguaGas.class);
-        startActivity(intent);
-    }
-    public void onClickAguaCoco(View view) {
-        Intent intent = new Intent(this, AguaGas.class);
-        startActivity(intent);
-    }
-    public void onClickCerveja(View view) {
-        Intent intent = new Intent(this, AguaGas.class);
-        startActivity(intent);
-    }
-    public void onClickSucoIndust(View view) {
-        Intent intent = new Intent(this, AguaGas.class);
+    public void onClickVoltar(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

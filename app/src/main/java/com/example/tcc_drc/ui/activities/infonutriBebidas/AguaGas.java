@@ -1,7 +1,9 @@
 package com.example.tcc_drc.ui.activities.infonutriBebidas;
 
 import com.example.tcc_drc.R;
+import com.example.tcc_drc.ui.activities.Bebidas;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;
 import android.database.sqlite.SQLiteDatabase;
@@ -139,5 +141,9 @@ public class AguaGas extends AppCompatActivity {
 
         }
 
+    }
+    public void onClickVoltar(View view) {
+        Intent intent = new Intent(this, Bebidas.class);
+        startActivity(intent);
     }
 }

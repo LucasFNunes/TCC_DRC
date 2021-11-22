@@ -21,26 +21,40 @@
         android:layout_height="115dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="59dp"
-        android:layout_marginEnd="71dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="65dp"
         app:layout_constraintBottom_toTopOf="@+id/listViewDados"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/gaswater" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="86dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="82dp"
+        android:id="@+id/imageView6"
+        android:layout_width="78dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="74dp"
-        android:layout_marginBottom="85dp"
+        android:layout_marginBottom="46dp"
         app:layout_constraintBottom_toTopOf="@+id/listViewDados"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/yellow" />
+        app:srcCompat="@drawable/green" />
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="-60dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onClickVoltar"
+        app:srcCompat="@drawable/ic_botao_return" />
 </androidx.constraintlayout.widget.ConstraintLayout>
