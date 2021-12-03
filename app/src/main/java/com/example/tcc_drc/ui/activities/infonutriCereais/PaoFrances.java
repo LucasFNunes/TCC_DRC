@@ -23,6 +23,8 @@ public class PaoFrances extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_pao_frances);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 

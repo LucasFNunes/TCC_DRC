@@ -23,6 +23,8 @@ public class Pacoca extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_pacoca);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 

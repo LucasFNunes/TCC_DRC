@@ -24,6 +24,8 @@ public class Achocolatado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_achocolatado);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 

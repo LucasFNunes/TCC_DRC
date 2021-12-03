@@ -24,6 +24,8 @@ public class Manteiga extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_manteiga);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 

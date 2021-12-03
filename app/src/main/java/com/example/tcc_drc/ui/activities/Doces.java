@@ -35,6 +35,8 @@ public class Doces extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_doces);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
         bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);

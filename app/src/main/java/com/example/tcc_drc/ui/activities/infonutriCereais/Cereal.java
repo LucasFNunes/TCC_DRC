@@ -25,6 +25,8 @@ public class Cereal extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_cereal);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 

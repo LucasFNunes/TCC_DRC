@@ -23,6 +23,8 @@ public class Margarina extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_margarina);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 

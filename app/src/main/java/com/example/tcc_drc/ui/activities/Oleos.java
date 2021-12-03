@@ -29,6 +29,8 @@ public class Oleos extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_oleos);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
         bancoDados = openOrCreateDatabase("crudeapp", MODE_PRIVATE,null);

@@ -39,6 +39,8 @@ public class Cereais extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_cereais);
 
         listViewDados = (ListView) findViewById(R.id.listViewDados);

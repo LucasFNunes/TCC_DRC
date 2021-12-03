@@ -20,6 +20,8 @@ public class Sobre extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_sobre);
     }
     public void onClickVoltar(View view) {

@@ -23,6 +23,8 @@ public class BiscoitoPolvilho extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_biscoito_polvilho);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 

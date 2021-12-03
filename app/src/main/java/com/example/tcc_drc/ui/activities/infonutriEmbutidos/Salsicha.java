@@ -23,6 +23,8 @@ public class Salsicha extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_salsicha);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 

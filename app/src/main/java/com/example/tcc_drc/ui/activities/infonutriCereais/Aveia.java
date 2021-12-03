@@ -24,6 +24,8 @@ public class Aveia extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_aveia);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 

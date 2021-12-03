@@ -23,6 +23,8 @@ public class MilhoEnlatado extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_milho_enlatado);
         listViewDados = (ListView) findViewById(R.id.listViewDados);
 
