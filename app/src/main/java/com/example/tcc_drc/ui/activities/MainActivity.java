@@ -61,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Temperos.class);
         startActivity(intent);
     }
+    public void onClickFrutas(View view) {
+        Intent intent = new Intent(this, Frutas.class);
+        startActivity(intent);
+    }
     public void onClickSobre(View view) {
         Intent intent = new Intent(this, Sobre.class);
         startActivity(intent);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tcc_drc" >
+    package="com.example.tcc_drc">
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -10,7 +10,52 @@
         android:allowBackup="true"
         android:icon="@drawable/dev_logo"
         android:label="@string/app_name"
-        android:theme="@style/Theme.TCC_DRC" >
+        android:theme="@style/Theme.TCC_DRC">
+        <activity
+            android:name=".ui.activities.Frutas"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Maracuja"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Uva"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Morango"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Melao"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Laranja"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Pessego"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Pera"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Manga"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Mamao"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Maca"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.BananaPrata"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.BananaMaca"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Abacaxi"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.infonutriFrutas.Abacate"
+            android:exported="true" />
         <activity
             android:name=".ui.activities.infonutriLeite.LeiteIntegral"
             android:exported="true" />
@@ -208,7 +253,7 @@
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

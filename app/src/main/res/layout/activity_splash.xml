@@ -19,6 +19,7 @@
         android:src="@drawable/dev_logo"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +31,7 @@
         android:layout_marginTop="94dp"
         android:layout_marginBottom="281dp"
         android:gravity="center_horizontal"
-        android:text="Nome do APP"
+        android:text="RIM HAPPY"
         android:textColor="#454545"
         android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"

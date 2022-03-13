@@ -22,8 +22,8 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="271dp"
-        android:layout_height="52dp"
+        android:layout_width="273dp"
+        android:layout_height="39dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="51dp"
@@ -38,12 +38,11 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="131dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="197dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginBottom="11dp"
         android:text="Como Funciona?"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
@@ -53,15 +52,18 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="371dp"
-        android:layout_height="255dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="30dp"
-        android:text="             O aplicativo é simples e focado em mostrar a pessoas com doenças renais crônicas os melhores e piores alimentos possiveis para sua alimentação, ao abrir o app, o paciente devera escolher qual a categoria de aliemento ele desejara ver e, em seguida escolher o alimento, depois de escolher o alimento é mostrado suas informações nutricionais e se este alimento possui algum tipo de beneficio ou maleficio ao paciente, estes são demonstrados através das carinhas mostrada ao lado dos alimentos selecionados, caso a carinha seja verde, este alimento é bom para os pacientes, caso ela esteja amarela, este alimento contém alguns componentes ruins para estes pacientes, caso esteja vermelha este alimento possui varios componentes ruins para estes pacientes portanto devem ser evitados."
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        android:layout_width="399dp"
+        android:layout_height="476dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="5dp"
+        android:text=" Sobre o aplicativo:
+A Doença Renal Crônica (DRC) é a perda lenta, progressiva e irreversível das funções renais e é considerada um problema de saúde pública. Os pacientes em tratamento hemodialítico necessitam de um cuidado especial com a alimentação, visando melhora no quadro clínico e bem-estar. Foi desenvolvido o aplicativo prático RIM HAPPY para auxiliar este público em suas escolhas alimentares. Utilizou-se a Tabela Brasileira de Composição de Alimentos – TACO (2011) e a Tabela de Composição Nutricional dos Alimentos Consumidos no Brasil (IBGE, 2011) como base de dados da composição de alimentos. Os produtos foram classificados conforme as recomendações da ANVISA, 2019; K/DOQI, National Kidney Foundation (2000).
+
+Como funciona:
+Quando abrir o aplicativo, o paciente poderá escolher qual o grupo alimentar deseja ver a informação e pode selecionar o alimento de seu interesse. Ao selecionar o alimento é possível observar as informações nutricionais. Os alimentos são classificados com carinhas, sendo a cor VERMELHA para aquele alimento que deve ser EVITADO, cor AMARELA para aquele que deve ser consumido com MODERAÇÃO e a cor VERDE para o alimento que é PERMITIDO. Os principais nutrientes também são destacados com as mesmas cores. A cor vermelha indica grande quantidade, a amarela média quantidade e a verde pequena quantidade."
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -70,55 +72,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="137dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="5dp"
         android:text="Créditos do Aplicativo: "
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="20dp"
-        android:text="Lucas Ferreira Nunes: Construção do Aplicativo."
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="130dp"
-        android:layout_marginBottom="13dp"
-        android:text="Lídia Bononi: Professora Orientadora."
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="53dp"
-        android:text="Gabriela: Informações sobre os produtos e a DRC."
+        android:layout_width="370dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="16dp"
+        android:text="Lucas Ferreira Nunes: Construção do Aplicativo. Gabriella Gonçalves de Melo : Informações sobre os produtos e a DRC. Fernanda Barbosa Borges Jardim e Lídia Bononi Paiva Tomaz: Professoras Orientadoras "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
