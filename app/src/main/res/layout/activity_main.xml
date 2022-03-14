@@ -30,10 +30,12 @@
         android:layout_marginBottom="20dp"
         android:onClick="onClickBebidas"
         android:text="@string/bebidas"
+        app:iconTint="#F15A2B"
         app:layout_constraintBottom_toTopOf="@+id/doces"
         app:layout_constraintEnd_toStartOf="@+id/cereais"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:strokeColor="#EDD7D7"
         tools:ignore="UsingOnClickInXml" />
 
     <Button

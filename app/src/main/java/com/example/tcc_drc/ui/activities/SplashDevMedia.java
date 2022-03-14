@@ -16,7 +16,7 @@ public class SplashDevMedia extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         view = findViewById(R.id.view);
-        view.setBackgroundColor(getResources().getColor(android.R.color.white));
+        view.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
 
         new Handler().postDelayed(new Runnable() {
             /*

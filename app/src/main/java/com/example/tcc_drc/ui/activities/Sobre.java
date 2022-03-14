@@ -7,9 +7,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteStatement;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,8 +23,10 @@ public class Sobre extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-
         setContentView(R.layout.activity_sobre);
+
+        TextView t2 = (TextView) findViewById(R.id.text2);
+        t2.setMovementMethod(LinkMovementMethod.getInstance());
     }
     public void onClickVoltar(View view) {
         Intent intent = new Intent(this, MainActivity.class);
